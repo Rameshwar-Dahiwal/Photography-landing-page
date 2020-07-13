@@ -324,7 +324,7 @@ h5 {
   left: 50%;
   transform: translateX(-50%);
 }
-.silver .book {
+.silver-btn {
   background: #844969;
   color: #fff;
 }
@@ -369,4 +369,57 @@ h5 {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+.bottom {
+  width: 100%;
+  height: 100vh;
+  background: url(/images/sea.jpg) center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: inset 10rem 10rem 12rem #504e5b;
+}
+.bottom h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+form {
+  height: 29rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.textbox {
+  padding: 1.4rem;
+  border: none;
+  border-radius: 2rem;
+}
+.silver-btn {
+  background: #844969;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.5rem 8rem;
+}
+.social-grid {
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+.social-sections {
+  background: rgba(97, 96, 106, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(97, 96, 106);
+  color: #fff;
 }
