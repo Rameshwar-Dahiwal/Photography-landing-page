@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fcf8f8;
+}
+
+h2 {
+  font-size: 3.3rem;
+}
+h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(80, 78, 91, 1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("/images/hero.jpg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: rgb(70, 67, 67);
+  box-shadow: inset 50rem 0rem 12rem #504e5b;
+}
+.nav-container {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 4rem;
+}
+.picture {
+  height: 4.5rem;
+  width: 4.5rem;
+  background: url(/images/logo.png) center center/cover;
+
+  border-radius: 50%;
+}
+.logo {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+}
+.text {
+  margin-left: 1rem;
+  width: 10rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 2;
+}
+.phone {
+  flex: 1;
+  text-align: right;
+  margin-right: 4rem;
+}
+.nav-links {
+  list-style: none;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.line {
+  height: 0.5rem;
+  width: 12rem;
+  background: #fff;
+  border-radius: 1.5rem;
+}
+.content {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  color: #fff;
+  transform: translate(-20%, -50%);
+}
+.content h1 {
+  font-size: 5rem;
+  margin-left: 2.5rem;
+  padding-top: 2rem;
+}
+.content p {
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
+  padding: 2.5rem 0rem;
+}
+.hire-me {
+  margin-left: 2.5rem;
+  padding: 1.5rem 6rem;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 3rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.social-links {
+  position: absolute;
+  left: 5%;
+  top: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 12rem;
+  width: 5rem;
+}
+.second-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.services-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: ". photo-shooting video-shooting retouch photo-printing .";
+  grid-gap: 3rem;
+}
+.services-container h4 {
+  padding: 2rem;
+}
+.services-container p {
+  font-size: 1.3rem;
+}
+.services-heading {
+  padding: 2rem 0rem;
+}
+
+.photo {
+  width: 4rem;
+  height: 4rem;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+}
+.photo-shooting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  grid-area: photo-shooting;
+}
+.video-shooting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  grid-area: video-shooting;
+}
+.retouch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  grid-area: retouch;
+}
+.photo-printing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  grid-area: photo-printing;
+}
+.third-section {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.gallery-heading {
+  padding: 4rem 0rem;
+}
+.gallery-container {
+  position: relative;
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 20vw);
+}
+.img1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.img2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.img3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.img4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.img5 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.img6 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.img7 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.contact-me {
+  background: #504e5b;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.cards-container {
+  padding: 10rem 0rem;
+  width: 78%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 0px 8px 0px rgb(194, 192, 192);
+
+  padding: 4rem 0rem;
+}
+.card1 h4,
+h5 {
+  padding: 1rem 0rem;
+}
+.card1 h4 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.card1 h5 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  border-bottom: 2px solid #844969;
+  padding: 0 0.5rem;
+}
+
+.cards-container ul {
+  list-style-position: inside;
+  line-height: 3.5rem;
+  font-size: 1.1rem;
+  width: 80%;
+  padding: 2.5rem;
+}
+.book {
+  color: #844969;
+  border: 1px solid #844969;
+}
+.silver {
+  background: #f1f1f1;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.silver .book {
+  background: #844969;
+  color: #fff;
+}
+.about-me {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-me h3 {
+  font-size: 2.7rem;
+  font-weight: bolder;
+}
+.about-me-container {
+  color: #fff;
+  display: flex;
+  background: #504e5b;
+  height: 70%;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 18rem;
+}
+
+.info-paragraph {
+  margin: 2rem 0rem;
+  font-size: 1.3rem;
+  width: 40rem;
+}
+.portrait {
+  position: absolute;
+  width: 30rem;
+  height: 50rem;
+  right: 18rem;
+}
+.portrait img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
