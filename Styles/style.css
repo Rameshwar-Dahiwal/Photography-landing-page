@@ -51,13 +51,14 @@ header {
       rgba(255, 255, 255, 0.1)
     ),
     url("/images/hero.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
   color: rgb(70, 67, 67);
   box-shadow: inset 50rem 0rem 12rem #504e5b;
 }
-.nav-container {
+
+.nav-items-container {
   background: transparent;
   display: flex;
   align-items: center;
@@ -107,6 +108,32 @@ nav {
   width: 12rem;
   background: var(--fontclr);
   border-radius: 1.5rem;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 3rem;
+  display: none;
+}
+
+.lines {
+  background: var(--fontclr);
+  width: 100%;
+  border-radius: 3rem;
+  height: 0.5rem;
+  transition: all 0.8s;
+}
+.change .line1 {
+  transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  transform: rotateZ(405deg) translate(-8px, -6px);
 }
 .content {
   position: absolute;
@@ -293,11 +320,12 @@ nav {
 }
 .cards-container {
   padding: 10rem 0rem;
-  width: 78%;
+  width: 100%;
+
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 .card1 {
@@ -307,6 +335,7 @@ nav {
   justify-content: space-between;
   box-shadow: 2px 0px 8px 0px rgb(194, 192, 192);
   padding: 4rem 0rem;
+  margin: 0 1rem;
 }
 .card1 h4,
 h5 {
@@ -329,10 +358,11 @@ h5 {
 }
 .silver {
   background: #f1f1f1;
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 2rem;
+  /* position: absolute; */
+  /* top: 12%; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 .silver-btn {
   background: #844969;
@@ -422,4 +452,178 @@ footer {
   text-align: center;
   background: rgba(97, 96, 106);
   color: var(--fontclr);
+}
+
+/* Media Queries */
+/* screen size 900pixels */
+@media only screen and (max-width: 900px) {
+  .nav-container {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    display: none;
+  }
+  .phone {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .content p {
+    font-size: 1.3rem;
+    word-spacing: 2px;
+  }
+  header {
+    box-shadow: none;
+  }
+  .info {
+    margin-left: 4rem;
+  }
+  .portrait {
+    right: 2rem;
+    height: 35rem;
+  }
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
+  .services-container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+      ". photo-shooting video-shooting . "
+      ". retouch photo-printing .";
+    grid-gap: 4rem;
+  }
+  .silver {
+    height: 55rem;
+  }
+}
+
+/* screen size 768 pixels */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  header {
+    overflow: hidden;
+    display: flex;
+    align-items: space-between;
+    justify-content: flex-end;
+    box-shadow: none;
+    position: relative;
+    background-size: cover;
+  }
+  .hamburger {
+    display: flex;
+    position: fixed;
+    right: 1.5%;
+    top: 2%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .nav-container {
+    height: 5rem;
+    background: green;
+  }
+  .nav-items-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -200rem;
+    top: 0;
+    padding: 7rem;
+    height: 100vh;
+    background: rgb(156, 155, 155);
+  }
+
+  .change {
+    transition: 1s ease;
+    right: 0rem;
+  }
+  .nav-links,
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .phone {
+    margin: 0rem;
+    margin-top: 3rem;
+  }
+  .nav-links li {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+  }
+
+  .social-links {
+    height: auto;
+    margin-left: 6.3rem;
+    width: 13rem;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contact-me button {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+  }
+  .services-container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+      ". photo-shooting video-shooting . "
+      ". retouch photo-printing .";
+    grid-gap: 4rem;
+  }
+  .price-heading {
+    padding: 1rem;
+  }
+
+  .cards-container {
+    position: relative;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+
+    padding: 2rem;
+  }
+  .card1 {
+    position: relative;
+    margin: auto;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
